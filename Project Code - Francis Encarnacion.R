@@ -1,0 +1,7 @@
+library(readr)
+sales <- read_csv("vgsales.csv")
+View(sales)
+hist(sales$NA_Sales, xlab = "Revenue (in millions)", ylab = "Number of Games", main = "Games Sold in North America")
+hist(sales$EU_Sales, xlab = "Revenue (in millions)", ylab = "Number of Games", main = "Games Sold in Europe")
+hist(sales$JP_Sales, xlab = "Revenue (in millions)", ylab = "Number of Games", main = "Games Sold in Japan")
+barplot(table(sales$Genre),xlab = "Genre", ylab = "Number of Games", main = "Sales by Genre",las = 2)
